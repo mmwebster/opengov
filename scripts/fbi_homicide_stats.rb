@@ -1,4 +1,4 @@
-require 'HTTParty'
+require 'HTTParty' # install: gem install httparty
 require 'JSON'
 require 'Nokogiri'
 
