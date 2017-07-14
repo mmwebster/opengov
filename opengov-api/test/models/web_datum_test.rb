@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class Api::V1::WebStatusesControllerTest < ActionDispatch::IntegrationTest
+class WebDatumTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

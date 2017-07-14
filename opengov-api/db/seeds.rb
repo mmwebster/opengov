@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-API::V1::Web_Status.create()
-API::V1::Web_Datum.create()
+WebStatus.create()
+WebDatum.create()

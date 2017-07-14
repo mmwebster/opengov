@@ -1,2 +1,2 @@
-class Api::V1::WebDataController < ApplicationController
+class Api::V1::WebDataController < JSONAPI::ResourceController
 end
