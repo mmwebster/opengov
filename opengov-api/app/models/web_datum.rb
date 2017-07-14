@@ -1,2 +1,0 @@
-class WebDatum < ApplicationRecord
-end
