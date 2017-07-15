@@ -23,3 +23,6 @@
     * Story points: 8
     * Assigned to: Milo Webster
     * Implementing: Basic API and associated infrastructure (Rails, Postgres, Worker Dynos) to serve this application in production
+
+## Sprint 2 Scrum Board
+View our active scrum board at: https://tree.taiga.io/project/mmwebster-opengov/taskboard/sprint-2-4550
