@@ -37,4 +37,5 @@
    * Started Sprint 1 late, so this was the shortest week
    * Midterms in this and other classes
 * No burn-up chart because we did not have time to properly compose user stories for completion
+   * Burn down charts viewable (in the future) at: https://tree.taiga.io/project/mmwebster-opengov/backlog
 * Expect Sprint 2 to be the most explosive because we have everything needed finally!
