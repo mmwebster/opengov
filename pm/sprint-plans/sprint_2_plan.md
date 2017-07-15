@@ -20,6 +20,6 @@
     * Assigned to: Daniel Hildebrandt, Anthony Awaida
     * Implementing as: A separate parsing algorithm to be compared to and combined with the first one, reinforcement ML to modify parameters to the base algorithm on a website-to-website basis
 * As a data analyst, I want to be able to send requests to the OpenGov API in order to check the status of parsing and website and to query data from the website once it has been parsed
-    * Story points: 
+    * Story points: 8
     * Assigned to: Milo Webster
     * Implementing: Basic API and associated infrastructure (Rails, Postgres, Worker Dynos) to serve this application in production
