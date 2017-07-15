@@ -4,9 +4,8 @@
 
 ## Sprint Attributes and Nomenclature
 
-Story Point to Hours Ratio: 2 to 1
-Story Point Scale: 1, 2, 3, 5, 8, 13, 20
-“SP”: Story Point
+* Story Point to Hours Ratio: 2 to 1
+* Story Point Scale: 1, 2, 3, 5, 8, 13, 20
 
 ## User Stories
 * As a data analyst, I want the data I query (from the following websites) to undergo basic parsing so that I don’t have to manually parse them:
