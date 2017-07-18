@@ -33,10 +33,10 @@
 
 ## Work Completion rate: 
 * Product is almost deliverable !
-  *Isolated environments are almost all working
-    *Scraper
-    *Api
-    *DB
+  * Isolated environments are almost all working
+    * Scraper
+    * Api
+    * DB
 * Here is our burn-down chart: https://tree.taiga.io/project/mmwebster-opengov/backlog
 * Caught up to be exactly on pace to deliver product
   * Uncertainty of ML implementation
