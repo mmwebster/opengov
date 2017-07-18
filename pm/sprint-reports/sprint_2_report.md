@@ -40,4 +40,3 @@
 * Here is our burn-down chart: https://tree.taiga.io/project/mmwebster-opengov/backlog
 * Caught up to be exactly on pace to deliver product
   * Uncertainty of ML implementation
-    * Will have to see how it will go
