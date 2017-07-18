@@ -6,7 +6,7 @@
 
 ## Actions to start doing:
 * Increase frequency of code submissions to github 
-  *Allows for group to work together better
+  * Allows for group to work together better
 * Update taiga board or doc with hours worked daily
 * Comment code better
   * Each member needs to be able to understand what you did
@@ -32,7 +32,7 @@
 
 
 ## Work Completion rate: 
-* Product is almost deliverable !
+* Product is almost deliverable!
   * Isolated environments are almost all working
     * Scraper
     * Api
