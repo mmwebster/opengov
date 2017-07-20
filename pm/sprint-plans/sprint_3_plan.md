@@ -8,7 +8,7 @@
 * Story Point Scale: 1, 2, 3, 5, 8, 13, 20, 40
 
 ## User Stories
-* As a data analyst, I want the data I query to successfully parse and run via the api module
+* As a data analyst, I want the data I query to successfully parse via my requests to the API so that I can fully utilize OpenGov
     * Story points: 13
     * Assigned to: David Krieger, Daniel Hildebrandt
     * Tasks Required (David Krieger):
