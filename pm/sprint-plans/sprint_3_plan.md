@@ -1,6 +1,6 @@
 # OpenGov Sprint 3 Plan
 
-## Date: 11- 18 July 2017
+## Date: 19- 24 July 2017
 
 ## Sprint Attributes and Nomenclature
 
@@ -9,20 +9,23 @@
 
 ## User Stories
 * As a data analyst, I want the data I query (from the following websites) to undergo basic parsing so that I don’t have to manually parse them:
-    * Story points: 8
-    * Assigned to: David Krieger, Daniel Hildebrandt
-    * Implementing as: Basic scraper/parser
-    * https://www.cia.gov/library/publications/the-world-factbook/
-    * https://www.cdc.gov/datastatistics/index.html
-    * https://ucr.fbi.gov/
-* As a data analyst, I want to be confident that the data I query is accurate
-    * Story points: 20
-    * Assigned to: Daniel Hildebrandt, Anthony Awaida
-    * Implementing as: A separate parsing algorithm to be compared to and combined with the first one, reinforcement ML to modify parameters to the base algorithm on a website-to-website basis
-* As a data analyst, I want to be able to send requests to the OpenGov API in order to check the status of parsing and website and to query data from the website once it has been parsed
-    * Story points: 8
-    * Assigned to: Milo Webster
-    * Implementing: Basic API and associated infrastructure (Rails, Postgres, Worker Dynos) to serve this application in production
+    * Story points: ?
+    * Assigned to: David Krieger
+    * Integrate scraper into API
+      * Setup environment and req's to run API
+      * Insert scraper code
+      * Debug errors thrown
+      * Analyze data output and refine scraper
+      
+* As a data analyst, ?I want to be confident that the data I query is accurate?
+    * Story points: 
+    * Assigned to: 
+    * 
+    
+* As a data analyst, ?I want to be able to send requests to the OpenGov API in order to check the status of parsing and website and to query data from the website once it has been parsed?
+    * Story points: 
+    * Assigned to: 
+    * 
 
-## Sprint 2 Scrum Board
-View our active scrum board at: https://tree.taiga.io/project/mmwebster-opengov/taskboard/sprint-2-4550
+## Sprint 3 Scrum Board
+View our active scrum board at: https://tree.taiga.io/project/mmwebster-opengov/taskboard/sprint-3-2291
