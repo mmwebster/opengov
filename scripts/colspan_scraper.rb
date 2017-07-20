@@ -35,76 +35,71 @@ def parse_tables(page_url)
     puts
 
 
-    $final_span = 0
     $span_check = []
-    table_head_array = [[],[]]
+
+    table_array = [[],[]]
 
     for i in 0..(num_header_rows - 1)
 
       $span_check [i] = 0
 
-      #puts "The row text is: #{table_rows[i].text}"
-
+      #Goes through header rows finding th number
       table_rows[i].css("th").each_with_index do |check|
 
         colspan = check["colspan"]
+        if (colspan.to_i > 1) && (check.text != nil)
 
-        if (colspan.to_i > 1)
-
+          #go through the full width of the col span adding it to each required column index
           for k in ($span_check[i]..colspan.to_i + $span_check[i] - 1)
 
-
-            #Append current text from current column into all subsequent lower columns
+            #Append current text from current column into all subsequent lower rows
             for j in i ..(num_header_rows - 1)
-              puts "Appending into current and lower row arrays the values #{j} #{k} #{check.text}"
-              #table_head_array[[j],[k]] = table_head_array[[i],[k]] << ".#{check.text}"
+
+              if table_array[j][k].to_s == ""
+                table_array[j][k] = "#{check.text}"
+              else
+                table_array[j][k] = "#{table_array[j][k].to_s}.#{check.text}"
+              end
+
+              puts "Current value of table_array at #{j} #{k}: #{table_array[j][k]}"
+
             end
             puts
+
           end
 
-          #didnt like += for some reason...
           #This counts the number of col spans in this row. Incase they wind up different, choose largest
-          $span_check[i] = $span_check[i] + colspan.to_i
-          #puts "The value of spancheck is #{$span_check[i]}"
-
-          #Update col span based on current iteration and largest one found on each row
-          if $final_span < $span_check[i]
-            $final_span = $span_check[i]
-            #puts "updated final_span to be #{$final_span}"
-          end
+          $span_check[i] +=  + colspan.to_i
 
         else
           #No phrase col span found or is exactly 1, let both increment by 1
-
           #first insert current phrase at location and append to all subsequent rows beneath
           for j in i ..(num_header_rows - 1)
-            #table_head_array[j][$span_check[k]] = table_head_array[[i],[k]] << ".#{check.text}"
-            puts "Appending into current and lower row arrays the values #{j} #{$span_check[i]} #{check.text}"
+
+            if table_array[j][$span_check[i]].to_s == ""
+              table_array[j][$span_check[i]] = "#{check.text}"
+            else
+              table_array[j][$span_check[i]] = "#{table_array[j][$span_check[i]].to_s}.#{check.text}"
+            end
+
+            puts "Current value of table_array at #{j} #{$span_check[i]}: #{table_array[j][$span_check[i]]}"
             puts
+
           end
 
           $span_check[i] = $span_check[i] + 1
 
-          #puts "Inserting into array value: #{i} #{k} the words #{check.text}"
-
         end
 
-
-
       end
-      puts
-      #puts "final_span on iteration #{i} is #{$final_span}"
-      puts
 
     end
 
-    puts "Largest final_span after everything is #{$final_span}"
     puts "\n=========================================================================================="
     puts
 
-
     # If valid headers exist, then for each one...
-    for i in 0...(table_rows.length)
+    for i in 0...(table_rows.length - 1)
       # Insert a new row-subarray to the appropriate list of rows
       if(i < num_header_rows) then table_headers.push([])
       else table_data.push([])
@@ -132,8 +127,8 @@ end
 
 if __FILE__ == $0 then
 
-  puts '\nBegin example scraping of CIA World Factbook: GDP per Capita'
-  puts 'https://www.cia.gov/library/publications/the-world-factbook/rankorder/2004rank.html'
+  puts '\nBegin example scraping of colspan based charts via epa'
+  puts 'https://www.epa.gov/recalls/fuel-economy-label-updates#ford'
   puts
 
   tables = parse_tables('https://www.epa.gov/recalls/fuel-economy-label-updates#ford')
@@ -149,7 +144,6 @@ if __FILE__ == $0 then
   puts 'Begin example scraping of CDC data: most recent asthma data'
   puts 'https://www.cdc.gov/asthma/most_recent_data.htm'
   puts
-
   tables = parse_tables('https://www.cdc.gov/asthma/most_recent_data.htm')
   tables.each do |t|
     json = t.to_json
@@ -158,11 +152,9 @@ if __FILE__ == $0 then
     end
     puts
   end
-
   puts 'Begin example scraping of CDC data: National Health Interview Survey'
   puts 'https://www.cdc.gov/asthma/nhis/2015/table1-1.htm'
   puts
-
   tables = parse_tables('https://www.cdc.gov/asthma/nhis/2015/table1-1.htm')
   tables.each do |t|
     json = t.to_json
@@ -171,7 +163,6 @@ if __FILE__ == $0 then
     end
     puts
   end
-
   # Some work needed: header/body row detection causes a crash
   #
   # puts 'Begin example scraping of FBI data: Homicides by Weapon Type'
@@ -191,5 +182,7 @@ if __FILE__ == $0 then
   #   puts
   # end
 =end
+
+
 
 end
