@@ -20,11 +20,21 @@ def parse_tables(page_url)
     table_headers = []
     table_data = []
 
-    # A header row is defined as a row which: is not anywhere inside a
-    # tbody element; contains two or more th children; and is not empty
+    # A header row is defined as one which has two or more th children and is not empty
     table_rows = table.css('tr')
-    num_header_rows = table_rows.length - table.css('tbody tr, tr th:only-of-type, tr:empty').length
-    num_body_rows   = table_rows.length - num_header_rows
+    num_header_rows = 0
+    num_body_rows = 0
+    
+    # Calculate the number of header rows at the tanle's top
+    table_rows.map do |row|
+      if(row.css('th').length > 1) then
+        num_header_rows += 1
+      else 
+        break
+      end
+    end
+    
+    num_body_rows = table_rows.length - num_header_rows
 
     puts "==========================================================================================="
     puts
