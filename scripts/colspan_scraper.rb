@@ -3,7 +3,7 @@ require 'nokogiri'
 require 'open-uri'
 
 def string_clean(string)
-  string.delete!("\n")
+  string.delete("\n")
   string.split.join(" ")
 end
 
@@ -137,13 +137,13 @@ def parse_tables(page_url)
         col_header = table_header_array[num_header_rows - 1][j]
 
         if row_data[j] == nil
-          table_data[i][j] =  "#{body_index}, "
+          table_data[i][j] =  body_index, " "
 
         #contains a header on left side, append to each table head of the column
         elsif has_header[0].to_s != ""
 
-          special_headers = "#{col_header}.#{has_header[0].text}"
-          string_clean(special_headers)
+          col_header = "#{col_header}.#{has_header[0].text}"
+          string_clean(col_header)
 
           #Row data != num of columns, null spaces make it hard to align data
           if row_data.length != ($final_span - 1)
@@ -152,9 +152,8 @@ def parse_tables(page_url)
 
           #Store all table data now
           if j != 0
-            table_data[i][j] = "#{body_index}, #{row_data[j-1].text}"
-            string_clean(table_data[i][j])
-            puts "Header type: Index is #{i} #{j}\nStored the row, text:  #{table_data[i][j]} \ndatatype of #{special_headers}"
+            table_data[i][j] = body_index, "#{row_data[j-1].text}"
+            string_clean(table_data[i][j][1])
           end
 
         #no head found, just do it normally
@@ -165,15 +164,18 @@ def parse_tables(page_url)
             $potential_bad_table_data = "The table was irregular and could contain incorrect data"
           end
 
-          table_data[i][j] =  "#{body_index}, #{row_data[j].text}"
-          string_clean(table_data[i][j])
-
-          puts "Stored in format 'row, value': #{table_data[i][j]}"
-          puts "Is of datatype: #{col_header}"
+          table_data[i][j] =  body_index, "#{row_data[j].text}"
+          string_clean(table_data[i][j][1])
 
 
         end
+
+        #FOR DANIEL, Here are the locations to hash for key: value
+        puts "Row # is stored at index 0:  #{table_data[i][j][0]}"
+        puts "The value is stored at index 1: #{table_data[i][j][1]}"
+        puts "The header key associated with it is the col_header: #{col_header}"
         puts
+
       end
     end
 
@@ -214,7 +216,7 @@ if __FILE__ == $0 then
   #puts 'https://www.epa.gov/recalls/fuel-economy-label-updates#ford'
   puts
 
-  tables = parse_tables('https://www.cia.gov/library/publications/the-world-factbook/rankorder/2127rank.html')
+  #tables = parse_tables('https://www.cia.gov/library/publications/the-world-factbook/rankorder/2127rank.html')
   #tables = parse_tables('https://www.cdc.gov/asthma/most_recent_data.htm')
   #tables = parse_tables('https://www.epa.gov/recalls/fuel-economy-label-updates#ford')
 
