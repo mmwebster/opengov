@@ -137,7 +137,7 @@ def parse_tables(page_url)
         col_header = table_header_array[num_header_rows - 1][j]
 
         if row_data[j] == nil
-          table_data[i][j] =  body_index, " "
+          table_data[i][j] =  body_index, ""
 
         #contains a header on left side, append to each table head of the column
         elsif has_header[0].to_s != ""
@@ -153,8 +153,11 @@ def parse_tables(page_url)
           #Store all table data now
           if j != 0
             table_data[i][j] = body_index, "#{row_data[j-1].text}"
-            string_clean(table_data[i][j][1])
+          else
+            table_data[i][j] = body_index, ""
           end
+
+          string_clean(table_data[i][j][1])
 
         #no head found, just do it normally
         else
@@ -212,14 +215,13 @@ end
 
 if __FILE__ == $0 then
 
-  #puts '\nBegin example scraping of colspan based charts via epa'
-  #puts 'https://www.epa.gov/recalls/fuel-economy-label-updates#ford'
   puts
 
-  #tables = parse_tables('https://www.cia.gov/library/publications/the-world-factbook/rankorder/2127rank.html')
-  #tables = parse_tables('https://www.cdc.gov/asthma/most_recent_data.htm')
-  #tables = parse_tables('https://www.epa.gov/recalls/fuel-economy-label-updates#ford')
+#Uncomment these to check the website
 
+  #tables = parse_tables('https://www.cia.gov/library/publications/the-world-factbook/rankorder/2127rank.html')
+  tables = parse_tables('https://www.cdc.gov/asthma/most_recent_data.htm')
+  #tables = parse_tables('https://www.epa.gov/recalls/fuel-economy-label-updates#ford')
 
 =begin
   tables.each do |t|
