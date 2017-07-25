@@ -18,9 +18,15 @@ web_data_endpoint = "web-data?" # No param to make urlencode easier to
                                 # work with
 web_page_remote_url = "https://www.cia.gov/library/publications/t" + \
                         "he-world-factbook/rankorder/2127rank.html"
+# user_query_str = "SELECT country FROM '" + \
+#                   web_page_remote_url + \
+#                  "' WHERE (children-born/woman) > 5"
+# user_query_str = "SELECT country FROM '" + \
+#                   web_page_remote_url + \
+#                  "' WHERE date-of-information != 2016"
 user_query_str = "SELECT country FROM '" + \
                   web_page_remote_url + \
-                 "' WHERE rank == 5"
+                 "' WHERE rank < 10"
 
 if len(sys.argv) < 2:
     print("WARNING: No URL argument passed for remote web page to scrape.")
