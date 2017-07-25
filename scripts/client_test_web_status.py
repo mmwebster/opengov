@@ -16,7 +16,7 @@ if len(sys.argv) < 2:
 else:
     remote_url = sys.argv[1]
 
-for i in range(9):
+for i in range(1):
     response = requests.get(base_api_url + remote_url)
     print("RESPONSE => " + str(response.json()))
     sleep(1)
