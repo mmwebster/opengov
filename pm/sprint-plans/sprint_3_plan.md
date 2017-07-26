@@ -24,7 +24,7 @@
         * After finishing all of my tasks, help David (particularly on integration of the two parsing algorithms)
 
 * As a data analyst, I want to be confident that the data I query is accurate so that my analyses are accurate.
-    * Story points: 40
+    * Story points: 20
     * Assigned to: Milo Webster, Anthony Awaida
     * Tasks Required (Anthony Awaida):
         * Identify an ML algorithm
