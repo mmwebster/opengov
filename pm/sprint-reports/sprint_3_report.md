@@ -2,22 +2,23 @@
 ## 26 July 2017
 
 ## Actions to stop doing:
-* 
+* Some tunnel vision when working on specific files
+* Leaving legacy code, remove it
 
 ## Actions to start doing:
-* 
-
+* Integrate isolated environments earlier
+* Code standard and clean code
+  * David - Use more methods!
 
 ## Actions to keep doing:
 * Screenshare and peer review/help if very stuck
-  * Its best for the team to help you at that instance
-* 
+  * Its best for the team to help at that instance
+* Refine Scraping Algorithm
 
 ## Work Completed
 * Scraper integration into API working
 * DB storage from scraper values
-* 
-
+* API filter and search works
 
 ## Work Not Completed:
 * Unfinished string parsing in worker --> DB
@@ -27,6 +28,7 @@
   * A.B.C
     * Target a or b or c
 * Clean up Worker file to improve readability
+* All of machine learning
 
 ## Work Completion rate: 
 * Product is deliverable!
