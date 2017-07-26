@@ -37,6 +37,7 @@
     * Scraper
     * Api
     * DB
-* Here is our burn-down chart: https://tree.taiga.io/project/mmwebster-opengov/backlog
 * Caught up to be exactly on pace to deliver product
   * Uncertainty of ML implementation
+* Burn-up chart available here: <url>
+
