@@ -36,5 +36,5 @@
    * Time taken to learn new languages 
    * Started Sprint 1 late, so this was the shortest week
    * Midterms in this and other classes
-* Burn-up chart available here: <url> 
+* Burn-up chart available here: https://drive.google.com/a/ucsc.edu/file/d/0B2F5t4DqJGYWZjhfTUlaQThQUE0/view?usp=sharing
 * Expect Sprint 2 to be the most explosive because we have everything needed finally!
