@@ -39,5 +39,5 @@
     * DB
 * Caught up to be exactly on pace to deliver product
   * Uncertainty of ML implementation
-* Burn-up chart available here: <url>
+* Burn-up chart available here: https://drive.google.com/a/ucsc.edu/file/d/0B2F5t4DqJGYWTjVGNXBDNkFPT1E/view?usp=sharing
 
