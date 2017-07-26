@@ -5,7 +5,6 @@
 * Release Date: 25 July 2017
 * Revision number: 1
 * Revision Date: 4 July 2017
-* Revision Date: 4 July 2017
 * Standup Meetings: M-F (except for Wednesday) @ 1pm in BE105
 
 ## Sprint 1: Build the Ruby on Rails API, setup the PG or Redis database
