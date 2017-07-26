@@ -31,4 +31,4 @@
 ## Work Completion rate: 
 * Product is deliverable!
   * Capable of parsing table data in web pages and providing an SQL interface for querying data through the public API on Heroku
-* Burnup chart available here: <url>
+* Burnup chart available here: https://drive.google.com/a/ucsc.edu/file/d/0B2F5t4DqJGYWZ1RzOWotMTkxNVk/view?usp=sharing
