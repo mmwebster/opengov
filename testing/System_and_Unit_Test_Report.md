@@ -13,7 +13,7 @@
 #### System Test Scenario - We have a single scenario with multiple potential outcomes. Flow chart style:
 
 
-1. Make a GET request to opengov-api.herokuapp.com/api/v1/web-statuses?filter[url]=<web-page-url>
+1. Make a GET request to <path-to-opengov-api>/api/v1/web-statuses?filter[url]=<web-page-url>
     1. Parse raw response as JSON-API spec’d JSON
 2. Check to see if the response contains a record
     1. If the “is-parsed” attribute on the record is TRUE
