@@ -1,7 +1,7 @@
 # OpenGov module_parser Unit testing
 ## 27 July 2017
 
-## Various table format testing w/ pictures
+## Equivalence Classes w/ Screenshots of Tests Performed
 
 Single Data Table, Easy Format
 * CIA.gov factbook was one of the original websites we chose that we would develop an algorithm on. It is very straightforward in how the html markup works and made it very easy for us to read in the data
