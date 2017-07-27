@@ -6,5 +6,5 @@ The WebData module consists of all submodules servicing functionality of the /ap
 
 ## Equivalence Classes & Corresponding Unit Tests
 1. Key names are single words
-    A) Nested
+    1. Nested
 2. Key names contain multiple words
