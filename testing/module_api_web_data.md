@@ -16,7 +16,7 @@ The WebData module consists of all submodules servicing functionality of the /ap
     * Desc: Key names in user inputted query contain multi-word key names
     * Test input: query="SELECT date-of-information FROM <cia.gov> WHERE (children-born/woman) == 6.04"
     * Should output: a single web datum corresponding to Date of Information for the country with children born per woman equal to 6.04
-    * Exact value: 2016 est.
+    * Exact value: 2016.0
 3. Values are integers
     * Desc: Values in user inputted query contain only integers
     * Test input: query="SELECT country FROM <cia.gov> WHERE rank == 2"
