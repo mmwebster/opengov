@@ -25,6 +25,6 @@
     1. If fields don’t match 
         1. Return empty
     1. Else
-        2. Return values found
+        1. Return values found
 
 System Test Scenarios: System tests located at https://github.com/mmwebster/opengov/tree/master/testing
