@@ -7,15 +7,15 @@
   * It only contains one table
   * Only one row of headers to worry about
   * No col/row span values which make it easy to generate the column header keys
-   * https://drive.google.com/open?id=0B1_MtIXVAOVGRVp1YkhxYTZWSGc
+    * https://drive.google.com/open?id=0B1_MtIXVAOVGRVp1YkhxYTZWSGc
   
 * The next URL we tested was from the cdc. Here we learned about reading in multiple tables and sorting the data appropriately.
   * There are 5 tables located on this url. 
     * We successfully read in all of them as well as strange characters
   * Still clear cut header format regarding span values and left column headers
-   * https://drive.google.com/open?id=0B1_MtIXVAOVGYjIyeWZQWUFrTkE
+    * https://drive.google.com/open?id=0B1_MtIXVAOVGYjIyeWZQWUFrTkE
   * Here is what the css markup looked like: 
-   * https://drive.google.com/open?id=0B1_MtIXVAOVGMGkzQkZOVDd1VWM
+    * https://drive.google.com/open?id=0B1_MtIXVAOVGMGkzQkZOVDd1VWM
 
 * After successfully reading in multiple tables given a single URL, we sought to improve general ability to read in more complex tables. We first started with learning how to read in and append multiple table header columns together. This involved also learning about col_span values.
   * Col span values mean that even though you are given only 1 'th' tag, it needs to be added to the # specified by the html css markup. 
