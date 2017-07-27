@@ -11,6 +11,8 @@ Single Data Table, Easy Format
   * No col/row span values which make it easy to generate the column header keys
     * https://drive.google.com/open?id=0B1_MtIXVAOVGRVp1YkhxYTZWSGc
   
+*****
+  
 Multiple Tables, Easy Format
 * The next URL we tested was from the cdc. Here we learned about reading in multiple tables and sorting the data appropriately.
   * Raw url: https://www.cdc.gov/asthma/most_recent_data.htm
@@ -20,6 +22,8 @@ Multiple Tables, Easy Format
     * https://drive.google.com/open?id=0B1_MtIXVAOVGYjIyeWZQWUFrTkE
   * Here is what the css markup looked like: 
     * https://drive.google.com/open?id=0B1_MtIXVAOVGMGkzQkZOVDd1VWM
+
+*****
 
 Multiple Tables, Hard Format (Col/Row Span)
 * After successfully reading in multiple tables given a single URL, we sought to improve general ability to read in more complex tables. We first started with learning how to read in and append multiple table header columns together. This involved also learning about col_span values.
@@ -34,7 +38,9 @@ Multiple Tables, Hard Format (Col/Row Span)
       * https://drive.google.com/open?id=0B1_MtIXVAOVGQW84dEhIQ0FpUXM
      * Here is the css markup showing both row & colspan and how they relate to formatting column headers: 
        * https://drive.google.com/open?id=0B1_MtIXVAOVGcWo4Y0N3WnlKQnc
-       
+
+*****
+
 Single Table, Hard Format (left column)
 * Some tables have column headers at the top ('th') as well as on the first column on the left. This can make it very difficult to properly format a table as well as have the correct header appends happen for the appropriate rows it specifies to
   * Raw url: https://ucr.fbi.gov/crime-in-the-u.s/2013/crime-in-the-u.s.-2013/offenses-known-to-law-enforcement/expanded-homicide/expanded_homicide_data_table_8_murder_victims_by_weapon_2009-2013.xls
