@@ -7,6 +7,7 @@ The WebData module consists of all submodules servicing functionality of the /ap
 ## Equivalence Classes & Corresponding Unit Tests
 ### Note: <cia.gov> = 'https://www.cia.gov/library/publications/the-world-factbook/rankorder/2127rank.html'
 ### Note: All equivalence classes are under the condition of the web page already having been successfully parsed (test stub)
+
 1. Key names are single words
     * Desc: Key names in user inputted query contain only single-word key names
     * Test input: query="SELECT country FROM <cia.gov> WHERE rank == 10"

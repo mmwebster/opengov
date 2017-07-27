@@ -5,6 +5,8 @@
 The WebStatuses module consists of all submodules servicing functionality of of the /api/v1/web-statuses?filter[url]=<url> API endpoint. This includes the return of a WebStatus record with a is-parsed field indicating the parsing status of the particular web page and initiation of parsing via the first call to this endpoint for a specific url (queues a job for the parsing/scraping worker).
 
 ## Equivalence Classes & Corresponding Unit Tests
+### Note: <cia.gov> = 'https://www.cia.gov/library/publications/the-world-factbook/rankorder/2127rank.html'
+
 1. Web page scraping/parsing has not yet begin
     * Desc: a user requests a web status record with the url of a new web page for the first time
     * Test input: url=<cia.gov>, time_elapsed = 0s
