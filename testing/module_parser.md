@@ -1,0 +1,32 @@
+# OpenGov module_parser Unit testing
+## 27 July 2017
+
+## Here is a list of photos showing various levels of success regarding the parser.
+
+* CIA.gov factbook was one of the original websites we chose that we would develop an algorithm on. It is very straightforward in how the html markup works and made it very easy for us to read in the data
+  * It only contains one table
+  * Only one row of headers to worry about
+  * No col/row span values which make it easy to generate the column header keys
+  * https://drive.google.com/open?id=0B1_MtIXVAOVGRVp1YkhxYTZWSGc
+  
+* The next URL we tested was from the cdc. Here we learned about reading in multiple tables and sorting the data appropriately.
+  * There are 5 tables located on this url. 
+    * We successfully read in all of them as well as strange characters
+  * Still clear cut header format regarding span values and left column headers
+  * https://drive.google.com/open?id=0B1_MtIXVAOVGYjIyeWZQWUFrTkE
+
+* After successfully reading in multiple tables given a single URL, we sought to improve general ability to read in more complex tables. We first started with learning how to read in and append multiple table header columns together. This involved also learning about col_span values.
+  * Col span values mean that even though you are given only 1 'th' tag, it needs to be added to the # specified by the html css markup. 
+  * We can see successful appending by the A.B.C format
+    * A being the parent of the child B
+    * Goal was to allow user to search through multiple header parameters
+    * Here is an example of success regarding reading in multiple table header rows as well as accounting for col_span header associations. 
+      * https://drive.google.com/open?id=0B1_MtIXVAOVGd3FWYTl5WktmVWc
+    * Here is an example of failure due to having row span values which we failed to create an algorithm which would account for it.
+      * Note: We successfully throw an error stating that the table was potentially miss read to tell the user that it is not working properly.
+      * https://drive.google.com/open?id=0B1_MtIXVAOVGQW84dEhIQ0FpUXM
+      
+* Some tables have column headers at the top ('th') as well as on the first column on the left. This can make it very difficult to properly format a table as well as have the correct header appends happen for the appropriate rows it specifies to
+  * We created a case that if there 2+ 'th' in a row then it must be at the top of the table. If there is only 1 'th' tag in the row, then it must be a special header tag that gets appended to only those row values.
+    * Look at this output for more understanding regarding table headers and css markup
+    * https://drive.google.com/open?id=0B1_MtIXVAOVGZVFhejN0VTBHMjA
