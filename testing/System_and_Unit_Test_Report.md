@@ -1,8 +1,6 @@
 # OpenGov System and Unit Test Report
 ## 27 July 2017
 
-*****
-
 ### Per Sprint User Stories 
 
 * User story 1 from sprint 2: As a data analyst, I want the data I query to undergo basic parsing so that I don’t have to manually parse them.
@@ -12,7 +10,7 @@
 
 *****
 
-#### System Test Scenario - We have a single scenario with multiple potential outcomes. Flow chart style:
+### System Test Scenario - We have a single scenario with multiple potential outcomes. Flow chart style:
 
 
 1. Make a GET request to opengov-api.herokuapp.com/api/v1/web-statuses?filter[url]=<web-page-url>
