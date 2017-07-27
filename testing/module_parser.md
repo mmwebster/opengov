@@ -14,6 +14,7 @@
     * We successfully read in all of them as well as strange characters
   * Still clear cut header format regarding span values and left column headers
   * https://drive.google.com/open?id=0B1_MtIXVAOVGYjIyeWZQWUFrTkE
+  * Here is what the css markup looked like: https://drive.google.com/open?id=0B1_MtIXVAOVGMGkzQkZOVDd1VWM
 
 * After successfully reading in multiple tables given a single URL, we sought to improve general ability to read in more complex tables. We first started with learning how to read in and append multiple table header columns together. This involved also learning about col_span values.
   * Col span values mean that even though you are given only 1 'th' tag, it needs to be added to the # specified by the html css markup. 
@@ -22,11 +23,15 @@
     * Goal was to allow user to search through multiple header parameters
     * Here is an example of success regarding reading in multiple table header rows as well as accounting for col_span header associations. 
       * https://drive.google.com/open?id=0B1_MtIXVAOVGd3FWYTl5WktmVWc
-    * Here is an example of failure due to having row span values which we failed to create an algorithm which would account for it.
-      * Note: We successfully throw an error stating that the table was potentially miss read to tell the user that it is not working properly.
+    * Here is an example of failure due to having row span values which we failed to create an algorithm which would account for it. Note: We successfully throw an error stating that the table was potentially miss read to tell the user that it is not working properly.
       * https://drive.google.com/open?id=0B1_MtIXVAOVGQW84dEhIQ0FpUXM
+     * Here is the css markup showing both row & colspan and how they relate to formating column headers: 
+       * https://drive.google.com/open?id=0B1_MtIXVAOVGcWo4Y0N3WnlKQnc
       
 * Some tables have column headers at the top ('th') as well as on the first column on the left. This can make it very difficult to properly format a table as well as have the correct header appends happen for the appropriate rows it specifies to
   * We created a case that if there 2+ 'th' in a row then it must be at the top of the table. If there is only 1 'th' tag in the row, then it must be a special header tag that gets appended to only those row values.
-    * Look at this output for more understanding regarding table headers and css markup
-    * https://drive.google.com/open?id=0B1_MtIXVAOVGZVFhejN0VTBHMjA
+    * Here is a the picture showing the output regardomg left hand column headers in addition to top row 'th' headers
+     * https://drive.google.com/open?id=0B1_MtIXVAOVGZVFhejN0VTBHMjA
+    * This is the markup for the webpage:
+     * https://drive.google.com/open?id=0B1_MtIXVAOVGdFBZVEl1SVRlQW8
+    
