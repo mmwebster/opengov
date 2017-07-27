@@ -7,14 +7,15 @@
   * It only contains one table
   * Only one row of headers to worry about
   * No col/row span values which make it easy to generate the column header keys
-  * https://drive.google.com/open?id=0B1_MtIXVAOVGRVp1YkhxYTZWSGc
+   * https://drive.google.com/open?id=0B1_MtIXVAOVGRVp1YkhxYTZWSGc
   
 * The next URL we tested was from the cdc. Here we learned about reading in multiple tables and sorting the data appropriately.
   * There are 5 tables located on this url. 
     * We successfully read in all of them as well as strange characters
   * Still clear cut header format regarding span values and left column headers
-  * https://drive.google.com/open?id=0B1_MtIXVAOVGYjIyeWZQWUFrTkE
-  * Here is what the css markup looked like: https://drive.google.com/open?id=0B1_MtIXVAOVGMGkzQkZOVDd1VWM
+   * https://drive.google.com/open?id=0B1_MtIXVAOVGYjIyeWZQWUFrTkE
+  * Here is what the css markup looked like: 
+   * https://drive.google.com/open?id=0B1_MtIXVAOVGMGkzQkZOVDd1VWM
 
 * After successfully reading in multiple tables given a single URL, we sought to improve general ability to read in more complex tables. We first started with learning how to read in and append multiple table header columns together. This involved also learning about col_span values.
   * Col span values mean that even though you are given only 1 'th' tag, it needs to be added to the # specified by the html css markup. 
@@ -31,7 +32,7 @@
 * Some tables have column headers at the top ('th') as well as on the first column on the left. This can make it very difficult to properly format a table as well as have the correct header appends happen for the appropriate rows it specifies to
   * We created a case that if there 2+ 'th' in a row then it must be at the top of the table. If there is only 1 'th' tag in the row, then it must be a special header tag that gets appended to only those row values.
     * Here is a the picture showing the output regardomg left hand column headers in addition to top row 'th' headers
-     * https://drive.google.com/open?id=0B1_MtIXVAOVGZVFhejN0VTBHMjA
+      * https://drive.google.com/open?id=0B1_MtIXVAOVGZVFhejN0VTBHMjA
     * This is the markup for the webpage:
-     * https://drive.google.com/open?id=0B1_MtIXVAOVGdFBZVEl1SVRlQW8
+      * https://drive.google.com/open?id=0B1_MtIXVAOVGdFBZVEl1SVRlQW8
     
