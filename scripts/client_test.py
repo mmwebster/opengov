@@ -27,9 +27,11 @@ web_page_remote_url = "https://www.cia.gov/library/publications/t" + \
 # user_query_str = "SELECT country FROM '" + \
 #                   web_page_remote_url + \
 #                  "' WHERE rank < 10"
-user_query_str = "SELECT country FROM '" + \
-                  web_page_remote_url + \
-                 "' WHERE rank < 10"
+# user_query_str = "SELECT country FROM '" + \
+#                   web_page_remote_url + \
+#                  "' WHERE rank < 10"
+# user_query_str = "SELECT date-of-information FROM '" + web_page_remote_url + "' WHERE (children-born/woman) == 6.04"
+user_query_str = "SELECT country FROM '" + web_page_remote_url + "' WHERE rank <= 2"
 
 if len(sys.argv) < 2:
     print("WARNING: No URL argument passed for remote web page to scrape.")
